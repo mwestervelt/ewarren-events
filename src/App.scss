@@ -1,0 +1,165 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,600&display=swap");
+
+.event-list {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 800px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.event {
+  flex: 0 0 100%;
+  margin-bottom: 16px;
+  background-color: white;
+   display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  // border: 1px solid rgb(0,0,0,0.125);
+
+  @media (min-width: 768px) {
+    flex: 0 0 calc(33.3% - 16px);
+  }
+}
+
+body {
+  background: var(--body_bg_color);
+ 
+ font-family: 'Oswald', sans-serif;
+ 
+}
+
+:root {
+  --body_bg_color: rgb(183, 228, 207);
+}
+
+
+h3 {
+    color: rgb(35, 36, 68);
+    text-transform: uppercase;
+}
+
+p {
+  font-weight: 300;
+}
+
+.event > a { align-self: flex-end; }
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  margin:0 auto;
+  color: white;
+  background: rgb(35, 36, 68);
+  border: 3px solid rgb(35, 36, 68);
+  width: 100px;
+  text-align: center;
+  margin: 10px;
+}
+
+.event a:hover {
+  background: var(--body_bg_color);
+  color: black;
+}
+
+.event-time {
+   padding: 0px 25px;
+}
+
+.event-title {
+  padding: 5px;
+}
+
+.event-address {
+  padding: 5px;
+}
+
+.header {
+   color: rgb(35, 36, 68);
+   text-transform: uppercase;
+   font-size: 30pt;
+   text-align: center;
+  overflow: hidden;
+   position: fixed; 
+   top: 0;  
+   width: 100%; 
+   background-color: #fff;
+   left: 0;
+  //  border-bottom: 1px solid rgb(0, 0, 0, 0.125);
+   
+}
+
+.loading {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  
+  // @-webkit-animation: spin 2s linear infinite; 
+  
+  animation: spin 2s linear infinite;
+    position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: visible;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
